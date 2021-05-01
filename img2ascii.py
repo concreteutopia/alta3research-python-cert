@@ -6,9 +6,11 @@ import numpy as np
 
 #chars = np.asarray(list(' .,:;irsXA253hMHGS#9B&@'))
 
-chars = np.asarray(list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. "))
+chars = np.asarray(list('@%#*+=-:. '))
 
-filename="default.jpg.1"
+#chars = np.asarray(list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. "))
+
+filename="default.jpg"
 scaling=.05
 intensity_corr=1.0
 width_corr=7/4
