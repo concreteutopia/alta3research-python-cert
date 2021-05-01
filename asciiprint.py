@@ -5,7 +5,7 @@ from crayon import *
 
 ASCII_CHARS = ["@", "#", "$", "%", "?", "*", "+", ";", ":", ",", "."]
 
-def resize(image, new_width = 100):
+def resize(image, new_width = 80):
     width, height = image.size
     #print(f"{width} x {height}")
     #width_percent = new_width/float(width)
@@ -56,6 +56,7 @@ def main():
 
             #printout(ascii_img[x], color=color_config, end='')
             printout("\u2593", color=color_config, end='')
+            
         else:
             print(ascii_img[x],end='')
 
