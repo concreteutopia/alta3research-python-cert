@@ -7,9 +7,11 @@ ASCII_CHARS = ["@", "#", "$", "%", "?", "*", "+", ";", ":", ",", "."]
 
 def resize(image, new_width = 100):
     width, height = image.size
+    #print(f"{width} x {height}")
     #width_percent = new_width/float(width)
     #new_height = int(float(height)*float(width_percent))
     new_height = new_width * height / width
+    #print(f"{new_width} x {new_height}")
     return image.resize((int(new_width), int(new_height)))
 
 def to_greyscale(image):
