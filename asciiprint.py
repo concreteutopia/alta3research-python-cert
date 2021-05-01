@@ -5,7 +5,7 @@ from crayon import *
 
 ASCII_CHARS = ["@", "#", "$", "%", "?", "*", "+", ";", ":", ",", "."]
 
-def resize(image, new_width = 75):
+def resize(image, new_width = 100):
     width, height = image.size
     #width_percent = new_width/float(width)
     #new_height = int(float(height)*float(width_percent))
@@ -57,20 +57,6 @@ def main():
         else:
             print(ascii_img[x],end='')
 
-    """
-        if ascii_img[x] == '\n':
-            printout("\n")
-        else:
-            my_grayscale_color = gray(int(ascii_img[x]))
-            color_config = {'fg':my_grayscale_color, 'bg':0}
-            printout("\u2588", color=color_config)
-    """
-    #print(ascii_img)
-    #print(type(ascii_img))
-    #print(len(ascii_img))
-
-
-#save the string to a file
-#    with open("ascii_image.txt", "w") as f:
-#        f.write(ascii_img);
+    #with open("ascii_image.txt", "w") as f:
+    #    f.write(ascii_img);
 main()
