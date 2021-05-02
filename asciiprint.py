@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 
-import PIL.Image
+import PIL.Image, time
 from crayon import *
+from subprocess import call
+from os import name as osname
 
-ASCII_CHARS = ["@", "#", "$", "%", "?", "*", "+", ";", ":", ",", "."]
+
+#ASCII_CHARS = ["@", "#", "$", "%", "?", "*", "+", ";", ":", ",", "."]
+
+ASCII_CHARS = ["@","%","#","*","+","=","-",":",";","."]
+
+def clear():
+    # check and make call for specific operating system
+    call('clear' if osname =='posix' else 'cls')
 
 def resize(image, new_width = 80):
     width, height = image.size
@@ -19,9 +28,10 @@ def to_greyscale(image):
 
 def pixel_to_ascii(image):
     pixels = image.getdata()
-    ascii_str = "";
+    ascii_str = ""
+    ascii_str_ch=""
     for pixel in pixels:
-        #ascii_str += ASCII_CHARS[pixel//25];
+        #ascii_str_ch += ASCII_CHARS[pixel//25];
         ascii_str += str(pixel//25)
     return ascii_str
 
@@ -38,8 +48,7 @@ def main():
     # convert greyscale image to ascii characters
     ascii_str = pixel_to_ascii(greyscale_image)
     img_width = greyscale_image.width
-#    print(type(ascii_str))
-#    print(ascii_str)
+    
     ascii_str_len = len(ascii_str)
     ascii_img=""
     #Split the string based on width  of the image
@@ -48,7 +57,7 @@ def main():
     
     #color_config = {'fg':5, 'bg':0}
     #printout(ascii_img, color=color_config)
-     
+    clear() 
     for x in range(0,len(ascii_img)):
         if ascii_img[x] != '\n':
             my_grayscale_color = gray(int(ascii_img[x]))
@@ -59,6 +68,7 @@ def main():
             
         else:
             print(ascii_img[x],end='')
+            time.sleep(0.075)
 
     #with open("ascii_image.txt", "w") as f:
     #    f.write(ascii_img);
