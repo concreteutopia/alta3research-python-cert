@@ -73,7 +73,7 @@ def main():
             idlist.append(resultsid['id'])
         clear()
         #For every id in the list, display the artwork details
-        #and ask if the artwork image should be downloaded.
+        #and prompt to download the file
         for artid in idlist:
             try:
                 artwork = requests.get(f"https://api.artic.edu/api/v1/artworks/{artid}")
