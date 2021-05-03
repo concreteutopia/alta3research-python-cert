@@ -2,7 +2,7 @@
 
 ##### Author: Chad Hansen
 ##### Date:   04/30/2021
-This script query's the Art Institute of Chicago's Collections API and prints information about the artworks it found.  
+This script queries the Art Institute of Chicago's Collections API and prints information about the artworks it found.  
 You can search for an artist, artwork or phrase and decide the maxium number of results to return.  
 
 You can also download an image of the artwork to your ~/static/ directory
