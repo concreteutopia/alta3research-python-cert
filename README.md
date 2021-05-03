@@ -10,5 +10,5 @@ You can also download an image of the artwork to your ~/static/ directory
 If you do not know what to search for, simply press <enter> and a random search will be made for you.
 
 ##### Requirements:  requests  
-> To install: python3 -m pip install requests  
+> **To install:** python3 -m pip install requests  
 ##### Usage: python3 alta3research-pythoncert01.py
