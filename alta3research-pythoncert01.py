@@ -127,6 +127,7 @@ def main():
                     break
                 elif download.lower() == "n" or download.lower()=="no":
                     #continue will  go to the top of the for loop and to next artwork
+                    print("----------------")
                     continue
                 else:
                     print("Invalid input! Moving on....")
